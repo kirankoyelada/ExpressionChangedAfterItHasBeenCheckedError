@@ -17,7 +17,7 @@ export class ChildComponentComponent implements OnInit {
     setTimeout(()=>{
       this.parent.name="this is chidl component changes";
     });
-    
+    console.log("ng on inti method",this.parent);
   }
 
   ngAfterViewInit(){
@@ -30,9 +30,9 @@ export class ChildComponentComponent implements OnInit {
   ngAfterContentInit(){
     console.log("ng after content init method",this.parent);
     //this.parent.name="this is chidl component changes";
-    // setTimeout(()=>{
-    //   this.parent.name="ng after content init";
-    // });
+    setTimeout(()=>{
+      this.parent.name="ng after content init";
+    });
   }
 
 }
